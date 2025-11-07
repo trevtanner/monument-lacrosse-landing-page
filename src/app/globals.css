@@ -138,22 +138,22 @@
 }
 
 .hero-header-text {
-  font-family: "Oswald", sans-serif;
-  font-size: calc(32px + 0.390625vw);
-  font-weight: 700;
-  color: #000000;
-  /* text-shadow: #000 0px 0px 4px, #000 0px 0px 4px, #000 0px 0px 4px,
-      #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px; */
+  font-family: "Archivo", sans-serif;
+  font-size: calc(52px + 0.390625vw);
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: #000 0px 0px 4px, #000 0px 0px 4px, #000 0px 0px 4px,
+    #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
   -webkit-font-smoothing: antialiased;
 }
 
 .hero-sub-text {
-  font-family: Roboto, serif;
-  font-size: calc(14px + 0.390625vw);
-  font-weight: 400;
-  color: #eef0f2;
-  /* text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
-      #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px; */
+  font-family: "Archivo", sans-serif;
+  font-size: calc(28px + 0.390625vw);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+    #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
   -webkit-font-smoothing: antialiased;
 }
 
