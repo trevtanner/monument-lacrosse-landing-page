@@ -16,7 +16,7 @@ export function Header() {
       <NavigationMenuList className="">
         <NavigationMenuItem>
           <NavigationMenuLink
-            className="hover:underline text-tertiary-100 p-2"
+            className="hover:underline p-2 hover:bg-transparent"
             asChild
           >
             <Link href="https://en.wikipedia.org/wiki/Lacrosse">
@@ -26,7 +26,7 @@ export function Header() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className="hover:underline text-tertiary-100 p-2"
+            className="hover:underline p-2 hover:bg-transparent"
             asChild
           >
             <Link href="https://www.tamalax.com/">Equipment</Link>
@@ -34,7 +34,7 @@ export function Header() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className="hover:underline text-tertiary-100 p-2"
+            className="hover:underline p-2 hover:bg-transparent"
             asChild
           >
             <Link href={"https://www.rangerlacrosse.org/"}>
@@ -44,11 +44,11 @@ export function Header() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink
-            className="hover:underline text-tertiary-100 p-2"
+            className="hover:underline p-2 hover:bg-transparent"
             asChild
           >
             <Link href={"https://www.grizzliesgirlslacrosse.org/"}>
-              Grizzlies Girls Lacrosse 
+              Grizzlies Girls Lacrosse
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>

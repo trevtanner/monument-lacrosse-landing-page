@@ -7,13 +7,13 @@ export default function LandingPage() {
   return (
     <section
       id="home"
-      className="relative bg-linear-to-r from-primary to-accent text-white py-20 md:py-32 overflow-hidden h-[87vh] w-full"
+      className="relative bg-linear-to-b from-primary to-primary text-white py-20 md:py-32 overflow-hidden h-[86vh] w-full"
     >
       <div className="absolute inset-0">
         <Image
-          src="/images/co-mountains.jpg"
+          src="/images/RGHeroImage.png"
           alt="Custom Apparel Hero"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-50"
           fill
         />
       </div>
@@ -21,13 +21,13 @@ export default function LandingPage() {
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up text-white">
           Monument Lacrosse <br className="hidden sm:inline" />
           <span className="text-2xl md:text-3xl">
-            Boys and girls youth lacrosse clubs for northern El Paso County
+            Boys and girls youth lacrosse clubs for Northern El Paso County
           </span>
         </h1>
 
-        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 gap-12">
           <Button
-            className="rounded-full transition duration-300 transform hover:scale-105 bg-transparent border border-black text-black hover:bg-black hover:text-white"
+            className="rounded-full transition duration-300 transform hover:scale-105 bg-black border border-white text-white hover:bg-gray-500 hover:text-white"
             size="lg"
           >
             <Link
@@ -38,7 +38,7 @@ export default function LandingPage() {
             </Link>
           </Button>
           <Button
-            className="rounded-full transition duration-300 transform hover:scale-105 bg-transparent border border-black text-black hover:bg-black hover:text-white"
+            className="rounded-full transition duration-300 transform hover:scale-105 bg-black border border-white text-white hover:bg-gray-500 hover:text-white"
             size="lg"
           >
             <Link
