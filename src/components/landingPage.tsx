@@ -28,28 +28,29 @@ export default function LandingPage() {
         </h2>
 
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 gap-x-12 gap-y-8 mt-8">
-          <Button
-            className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
-            size="lg"
+          <Link
+            href={"https://www.rangerlacrosse.org/"}
+            aria-label="Ranger Lacrosse Link"
+            className="hover:cursor-default"
           >
-            <Link
-              href={"https://www.rangerlacrosse.org/"}
-              aria-label="Ranger Lacrosse Link"
+            <Button
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              size="lg"
             >
               Boy's Lacrosse
-            </Link>
-          </Button>
-          <Button
-            className="rounded-full transition duration-300 transform hover:scale-110 bg-slate-900 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
-            size="lg"
+            </Button>
+          </Link>
+          <Link
+            href={"https://www.grizzliesgirlslacrosse.org/"}
+            aria-label="Grizzlies Girls Lacrosse Link"
           >
-            <Link
-              href={"https://www.grizzliesgirlslacrosse.org/"}
-              aria-label="Grizzlies Girls Lacrosse Link"
+            <Button
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-slate-900 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              size="lg"
             >
               Girl's Lacrosse
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
