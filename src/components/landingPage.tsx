@@ -15,6 +15,8 @@ export default function LandingPage() {
           alt="Custom Apparel Hero"
           className="w-full h-full object-cover opacity-50"
           fill
+          preload={true}
+          loading="eager"
         />
       </div>
       <div className="container mx-auto relative z-10 text-center px-4 sm:px-6 lg:px-8">
@@ -27,7 +29,7 @@ export default function LandingPage() {
 
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 gap-x-12 gap-y-8 mt-8">
           <Button
-            className="rounded-full transition duration-300 transform hover:scale-110 bg-black border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+            className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
             size="lg"
           >
             <Link
@@ -38,7 +40,7 @@ export default function LandingPage() {
             </Link>
           </Button>
           <Button
-            className="rounded-full transition duration-300 transform hover:scale-110 bg-black border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+            className="rounded-full transition duration-300 transform hover:scale-110 bg-slate-900 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
             size="lg"
           >
             <Link
