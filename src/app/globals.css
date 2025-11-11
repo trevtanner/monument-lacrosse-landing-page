@@ -116,7 +116,7 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
-  }
+  } /* Changes buttons to cursor:pointer   */
   * {
     @apply border-border outline-ring/50;
   }
