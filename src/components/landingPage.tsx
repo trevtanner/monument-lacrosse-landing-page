@@ -37,7 +37,7 @@ export default function LandingPage() {
               className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
               size="lg"
             >
-              Boy's Lacrosse
+              Boys Ranger Lacrosse
             </Button>
           </Link>
           <Link
@@ -48,7 +48,7 @@ export default function LandingPage() {
               className="rounded-full transition duration-300 transform hover:scale-110 bg-slate-900 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
               size="lg"
             >
-              Girl's Lacrosse
+              Grizzlies Girls Lacrosse
             </Button>
           </Link>
         </div>
