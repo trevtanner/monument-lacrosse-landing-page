@@ -52,6 +52,14 @@ export function Header() {
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            className="hover:underline p-2 hover:bg-transparent"
+            asChild
+          >
+            <Link href={"https://www.cosmolax.com/"}>Cosmo Chaos Lacrosse</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
