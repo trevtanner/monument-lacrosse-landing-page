@@ -8,7 +8,7 @@ export function Footer() {
     <>
       <div className="py-4 bg-tertiary-100">
         <p className="text-center text-md m-auto">
-          North Springs Youth Lacrosse © {currentYear}
+          North Springs Lacrosse © {currentYear}
         </p>
       </div>
     </>
