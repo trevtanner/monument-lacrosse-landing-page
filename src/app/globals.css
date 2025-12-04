@@ -41,6 +41,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-900: var(--color-navy-900);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-600: var(--color-gold-600);
+  --color-header-bg: var(--color-header-bg);
+  --color-bolts-main: var(--color-bolts-main);
+}
+
+@layer base {
 }
 
 :root {
@@ -59,7 +68,7 @@
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: oklch(58.302% 0.23867 28.465);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
@@ -76,6 +85,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --color-navy-800: oklch(27.95% 0.03688 260.049);
+  --color-navy-900: oklch(20.768% 0.03985 265.767);
+  --color-gold-500: oklch(83.685% 0.16435 84.431);
+  --color-gold-600: oklch(66.583% 0.15738 58.309);
+
+  --color-header-bg: rgb(39, 35, 36);
+
+  --color-bolts-main: oklch(36.857% 0.11958 259.591);
 }
 
 .dark {
@@ -143,8 +161,8 @@
 
 .hero-header-text {
   font-family: "Archivo", sans-serif;
-  font-size: calc(52px + 0.390625vw);
-  font-weight: 900;
+  font-size: calc(60px + 0.390625vw);
+  font-weight: 800;
   color: #ffffff;
   text-shadow: #000 0px 0px 4px, #000 0px 0px 4px, #000 0px 0px 4px,
     #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
@@ -153,8 +171,8 @@
 
 .hero-sub-text {
   font-family: "Archivo", sans-serif;
-  font-size: calc(28px + 0.390625vw);
-  font-weight: 700;
+  font-size: calc(16px + 0.390625vw);
+  font-weight: 400;
   color: #ffffff;
   text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
     #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;

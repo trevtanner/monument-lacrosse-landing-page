@@ -20,7 +20,8 @@ const ArchivoSans = Archivo({
 });
 export const metadata: Metadata = {
   title: "North Springs Lax",
-  description: "Landing page for Ranger Lacrosse, Grizzlies Girls Lacrosse, and Cosmo Chaos Lacrosse",
+  description:
+    "Landing page for Ranger Lacrosse, Grizzlies Girls Lacrosse, and Cosmo Chaos Lacrosse",
 };
 
 export default function RootLayout({
