@@ -27,14 +27,14 @@ export default function LandingPage() {
           Boys and girls youth lacrosse clubs for Northern Colorado Springs
         </h2>
 
-        <div className="font-sans flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 gap-x-12 gap-y-8 mt-8 grid grid-cols-2">
+        <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-8 grid grid-cols-1 sm:grid-cols-2">
           <Link
             href={"https://www.rangerlacrosse.org/"}
             aria-label="Ranger Lacrosse Link"
             className="hover:cursor-default"
           >
             <Button
-              className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white sm:w-auto m-auto sm:m-0"
               size="lg"
             >
               Ranger Boys Lacrosse
@@ -45,20 +45,20 @@ export default function LandingPage() {
             aria-label="Grizzlies Girls Lacrosse Link"
           >
             <Button
-              className="rounded-full transition duration-300 transform hover:scale-110 bg-slate-900 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-slate-900 border border-white text-white hover:bg-gray-500 hover:text-white sm:w-auto m-auto sm:m-0"
               size="lg"
             >
               Grizzlies Girls Lacrosse
             </Button>
           </Link>
         </div>
-        <div className="py-2">
+        <div className="py-4">
           <Link
             href={"https://www.cosmolax.com/club-team"}
             aria-label="Cosmo Chaos Lacrosse Summer Tryouts Link"
           >
             <Button
-              className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-600 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-600 border border-white text-white hover:bg-gray-500 hover:text-white sm:w-auto m-auto sm:m-0"
               size="lg"
             >
               Cosmo Chaos Lacrosse Summer Team Tryouts
@@ -73,7 +73,7 @@ export default function LandingPage() {
             aria-label="Bolts Lacrosse Summer Tryouts Link"
           >
             <Button
-              className="rounded-full transition duration-300 transform hover:scale-110 bg-bolts-main border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-bolts-main border border-white text-white hover:bg-gray-500 hover:text-white sm:w-auto m-auto sm:m-0"
               size="lg"
             >
               Bolts Lacrosse Summer Team Tryouts
@@ -89,7 +89,7 @@ export default function LandingPage() {
             aria-label="U15 U.S. National Team Tryouts Link"
           >
             <Button
-              className="rounded-full transition duration-300 transform hover:scale-110 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white sm:w-auto m-auto sm:m-0"
               size="lg"
             >
               U15 Boys U.S. National Team Regional ID Clinic

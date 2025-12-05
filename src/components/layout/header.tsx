@@ -35,7 +35,7 @@ export function Header() {
 
         <NavigationMenu className="">
           <NavigationMenuList className="flex-wrap gap-6">
-            <NavigationMenuItem>
+            <NavigationMenuItem className="hidden sm:flex">
               <NavigationMenuLink
                 className="hover:underline text-gray-300 p-2 hover:bg-transparent hover:text-gray-600"
                 asChild
