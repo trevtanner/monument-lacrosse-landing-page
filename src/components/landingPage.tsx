@@ -24,7 +24,8 @@ export default function LandingPage() {
           North Springs Lacrosse <br className="hidden sm:inline" />
         </h1>
         <h2 className="hero-sub-text mb-8 max-w-3xl mx-auto">
-          Boys and girls youth lacrosse clubs for Northern Colorado Springs
+          Central directory for boys and girls lacrosse opportunities in
+          Northern Colorado Springs
         </h2>
 
         <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-8 grid grid-cols-1 sm:grid-cols-2">
@@ -52,7 +53,7 @@ export default function LandingPage() {
             </Button>
           </Link>
         </div>
-        <div className="py-4">
+        <div className="py-2">
           <Link
             href={"https://www.cosmolax.com/club-team"}
             aria-label="Cosmo Chaos Lacrosse Summer Tryouts Link"
