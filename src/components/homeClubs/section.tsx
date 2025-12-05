@@ -6,7 +6,7 @@ import UpcomingDates from "./upcomingDates";
 
 export default function ClubsSection() {
   return (
-    <section id="clubs" className="container mx-auto px-12 py-16 bg-slate-200">
+    <section className="container mx-auto px-12 py-16 bg-slate-200">
       <div className="flex flex-col lg:flex-row gap-12">
         <div className="w-full lg:w-8/12 space-y-16">
           <section>
@@ -14,12 +14,12 @@ export default function ClubsSection() {
               <h3 className="font-display font-black text-3xl text-navy-900">
                 Local Clubs
               </h3>
-              <a
+              {/* <a
                 href="#"
                 className="text-sm font-bold text-gold-600 hover:underline"
               >
                 View All Teams &rarr;
-              </a>
+              </a> */}
             </div>
 
             <div className="grid md:grid-cols-2">

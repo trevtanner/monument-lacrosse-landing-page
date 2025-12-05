@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/data*": ["./src/data/*"]
+      "@/data*": ["./src/data/*"],
+      "@/images*": ["./public/images/*"]
     }
   },
   "include": [

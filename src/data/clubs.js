@@ -1,7 +1,7 @@
 export const teams = [
   {
     title: "Ranger Lacrosse",
-    icon: "RL",
+    icon: "/images/RangerLogoEdit.png",
     location: "Monument",
     ages: "K-8th Grade",
     category: "Boys",
@@ -12,7 +12,7 @@ export const teams = [
 
   {
     title: "Grizzlies Lacrosse",
-    icon: "GL",
+    icon: "/images/GrizzliesLogoEdited.png",
     location: "Monument",
     ages: "K-8th Grade",
     category: "Girls",
@@ -23,7 +23,7 @@ export const teams = [
 
   {
     title: "Cosmo Chaos Lacrosse",
-    icon: "CCL",
+    icon: "/images/ChaosLogoEdited.png",
     location: "Colorado Springs + Monument",
     ages: "4th Grade-HS",
     category: "Boys & Girls",
@@ -34,7 +34,7 @@ export const teams = [
 
   {
     title: "Bolts Lacrosse",
-    icon: "BL",
+    icon: "/images/BoltsLogoEdited.png",
     location: "Colorado Springs",
     ages: "4th Grade-HS",
     category: "Boys & Girls",

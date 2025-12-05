@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 interface ClubCardProps {
@@ -25,9 +26,14 @@ export const ClubCard: React.FC<ClubCardProps> = ({ details }) => {
     <section id="home" className="container mx-auto px-4 py-4 bg-slate-200">
       <div className="group bg-white border border-slate-200 rounded-xl p-6 hover:shadow-xl hover:border-slate-500 transition duration-300">
         <div className="flex justify-between items-start mb-4">
-          <div className="w-14 h-14 bg-navy-100 rounded-full flex items-center justify-center text-navy-800 font-bold">
-            {details.icon}
-          </div>
+          <Image
+            src={details.icon}
+            alt=""
+            width={75}
+            height={75}
+            className="flex items-center justify-center text-navy-800 font-bold"
+          />
+
           {/* <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">
             {details.status}
           </span> */}
