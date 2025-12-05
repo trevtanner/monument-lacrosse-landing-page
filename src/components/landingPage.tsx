@@ -52,7 +52,20 @@ export default function LandingPage() {
             </Button>
           </Link>
         </div>
-        <div className="py-4">
+        <div className="py-2">
+          <Link
+            href={"https://www.cosmolax.com/club-team"}
+            aria-label="Cosmo Chaos Lacrosse Summer Tryouts Link"
+          >
+            <Button
+              className="rounded-full transition duration-300 transform hover:scale-110 bg-orange-600 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
+              size="lg"
+            >
+              Cosmo Chaos Lacrosse Summer Team Tryouts
+            </Button>
+          </Link>
+        </div>
+        <div className="py-2">
           <Link
             href={
               "https://boltslax.leagueapps.com/events/4823577-2026-summer-tryout"
@@ -67,7 +80,8 @@ export default function LandingPage() {
             </Button>
           </Link>
         </div>
-        <div>
+
+        <div className="py-2">
           <Link
             href={
               "https://account.usalacrosse.com/event/view/44a42f62-441e-476a-9c8d-7a079fb79cef?_ga=2.105086983.542787578.1763389973-724434079.1755528701&_gac=1.81091941.1762266540.Cj0KCQiA5abIBhCaARIsAM3-zFW3FvSskWrDNYjKa_qWJAA9SeuUKK_bJi3RNykf9-z4FmwEkv8JZdMaAu7uEALw_wcB"
@@ -78,7 +92,7 @@ export default function LandingPage() {
               className="rounded-full transition duration-300 transform hover:scale-110 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white w-2/3 sm:w-auto m-auto sm:m-0"
               size="lg"
             >
-              U15 U.S. National Team Tryouts
+              U15 Boys U.S. National Team Regional ID Clinic
             </Button>
           </Link>
         </div>

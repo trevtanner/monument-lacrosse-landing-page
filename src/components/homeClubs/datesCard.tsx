@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface DatesCardProps {
   details: {
     title: string;
@@ -24,8 +26,14 @@ export const DatesCard: React.FC<DatesCardProps> = ({ details }) => {
         <span className="text-lg font-black leading-none">{day}</span>
       </div>
       <div>
-        <h5 className="font-bold text-navy-900 text-md">{details.title}</h5>
-        <p className="text-sm text-slate-500 font-semibold">{details.subtitle}</p>
+        <h5 className="font-bold text-navy-900 text-md">
+          <Link href={details.url} className="hover:underline">
+            {details.title}
+          </Link>
+        </h5>
+        <p className="text-sm text-slate-500 font-semibold">
+          {details.subtitle}
+        </p>
         <p className="text-xs text-slate-500 font-semibold">{details.team}</p>
       </div>
     </div>
