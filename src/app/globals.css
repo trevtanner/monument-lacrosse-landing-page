@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -32,7 +34,6 @@
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -47,6 +48,11 @@
   --color-gold-600: var(--color-gold-600);
   --color-header-bg: var(--color-header-bg);
   --color-bolts-main: var(--color-bolts-main);
+  --color-rangers-main: var(--color-rangers-main);
+  --color-grizzlies-main: var(--color-grizzlies-main);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-tertiary: var(--color-tertiary);
 }
 
 @layer base {
@@ -94,6 +100,12 @@
   --color-header-bg: rgb(39, 35, 36);
 
   --color-bolts-main: oklch(36.857% 0.11958 259.591);
+
+  --color-rangers-main: oklch(65.559% 0.13344 56.794);
+  --color-grizzlies-main: oklch(38.219% 0.04478 249.096);
+  --color-primary: oklch(24.802% 0.00611 17.319);
+  --color-secondary: oklch(86.012% 0.07114 81.38);
+  --color-tertiary: oklch(48.319% 0.07239 58.723);
 }
 
 .dark {
