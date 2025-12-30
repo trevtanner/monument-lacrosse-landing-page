@@ -45,19 +45,20 @@ export const teams = [
 ];
 
 export const dates = [
-  {
-    title: "Chaos 2026 Summer Tryouts",
-    subtitle: "Boys HS + Youth",
-    date: "Dec 13",
-    team: "Cosmo Chaos Lacrosse",
-    url: "https://www.cosmolax.com/club-team",
-  },
+  
   {
     title: "Bolts 2026 Summer Tryouts",
     subtitle: "Boys and Girls HS + Youth",
     date: "Jan 04",
     team: "Bolts Lacrosse",
     url: "https://boltslax.leagueapps.com/events/4823577-2026-summer-tryout",
+  },
+  {
+    title: "Chaos 2026 Supplemental Summer Tryouts",
+    subtitle: "Boys HS + Youth",
+    date: "Jan 10",
+    team: "Cosmo Chaos Lacrosse",
+    url: "https://www.cosmolax.com/chaosassessmentday",
   },
   {
     title: "U.S. National Team ID Clinic",

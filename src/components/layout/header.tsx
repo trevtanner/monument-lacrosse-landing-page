@@ -1,133 +1,160 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuContent,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+  createTheme,
+  Dropdown,
+  DropdownItem,
+} from "flowbite-react";
+
+const customHeaderTheme = createTheme({
+  navbar: {
+    link: {
+      base: "block py-2 pl-3 pr-4 md:p-0",
+      active: {
+        on: "bg-primary-700 text-gray-200 md:bg-transparent md:text-secondary dark:text-white",
+        off: "border-b border-gray-100 text-gray-300 hover:bg-gray-600 md:border-0 md:hover:bg-transparent md:hover:text-gray-600 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-white",
+      },
+    },
+  },
+  dropdown: {
+    floating: {
+      animation: "transition-opacity",
+      arrow: {
+        base: "absolute z-10 h-2 w-2 rotate-45",
+        style: {
+          dark: "bg-gray-900 dark:bg-gray-700",
+          light: "bg-white",
+          auto: "bg-white dark:bg-gray-700",
+        },
+        placement: "-4px",
+      },
+      base: "z-10 w-fit divide-y divide-gray-100 rounded shadow focus:outline-none",
+      content: "py-1 text-sm text-gray-700 dark:text-gray-200",
+      divider: "my-1 h-px bg-gray-100 dark:bg-gray-600",
+      header: "block px-4 py-2 text-sm text-gray-700 dark:text-gray-200",
+      hidden: "invisible opacity-0",
+      item: {
+        container: "",
+        base: "flex w-full cursor-pointer items-center justify-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:underline focus:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white",
+        icon: "mr-2 h-4 w-4",
+      },
+      style: {
+        dark: "bg-gray-900 text-white dark:bg-gray-700",
+        light: "border border-gray-200 bg-white text-gray-900",
+        auto: "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white",
+      },
+      target: "w-fit",
+    },
+    inlineWrapper: "flex items-center text-gray-200 hover:text-gray-600",
+  },
+});
 
 export function Header() {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 bg-header-bg shadow-lg border-b border-white/10">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-white rounded flex items-center justify-center transform -skew-x-12">
-            <span className="font-display font-black text-navy-900 text-lg transform skew-x-12">
-              NS
-            </span>
+      <Navbar
+        fluid
+        className="sticky top-0 z-50 bg-header-bg shadow-lg border-b border-white/10"
+        theme={customHeaderTheme.navbar}
+      >
+        <NavbarBrand href="/">
+          <div className="flex items-center gap-3">
+            <img
+              src="/images/ranger-grizz400trans.png"
+              className="h-12 lg:h-16"
+              alt="Dasher Apparel Logo"
+            />
+            <div className="hidden lg:block">
+              <h1 className="font-display font-black text-white text-xl tracking-wider leading-none">
+                NORTH SPRINGS
+              </h1>
+              <span className="text-xs text-slate-400 font-bold tracking-[0.2em] uppercase">
+                Lacrosse Hub
+              </span>
+            </div>
           </div>
-          <div className="hidden lg:block">
-            <h1 className="font-display font-black text-white text-xl tracking-wider leading-none">
-              NORTH SPRINGS
-            </h1>
-            <span className="text-xs text-slate-400 font-bold tracking-[0.2em] uppercase">
-              Lacrosse Hub
-            </span>
-          </div>
-        </div>
+        </NavbarBrand>
 
-        <NavigationMenu className="">
-          <NavigationMenuList className="flex-wrap gap-6">
-            <NavigationMenuItem className="hidden sm:flex">
-              <NavigationMenuLink
-                className="hover:underline text-gray-300 p-2 hover:bg-transparent hover:text-gray-600"
-                asChild
-              >
-                <Link href="https://en.wikipedia.org/wiki/Lacrosse" passHref>
-                  What Is Lacrosse?
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            {/* <NavigationMenuItem>
-              <NavigationMenuLink
-                className="hover:underline text-gray-300 p-2 hover:bg-transparent hover:text-gray-600"
-                asChild
-              >
-                <Link href="/" passHref>
-                  Events
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className="hover:underline text-gray-300 p-2 hover:bg-transparent hover:text-gray-600"
-                asChild
-              >
-                <Link href="/" passHref>
-                  News
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem> */}
-            <NavigationMenuItem className="text-gray-300 hover:text-gray-400">
-              <NavigationMenuTrigger className="">Clubs</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-4 ">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="https://www.rangerlacrosse.org/"
-                        className="hover:bg-gray-300"
-                      >
-                        Ranger Boys Lacrosse
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="https://www.grizzliesgirlslacrosse.org/"
-                        className="hover:bg-gray-300"
-                      >
-                        Grizzlies Girls Lacrosse
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="https://www.cosmolax.com/"
-                        className="hover:bg-gray-300"
-                      >
-                        Cosmo Chaos Lacrosse
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="https://boltslax.leagueapps.com/"
-                        className="hover:bg-gray-300"
-                      >
-                        Bolts Lacrosse
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                className="hover:underline text-gray-300 p-2 hover:bg-transparent hover:text-gray-400"
-                asChild
-              >
-                <Link href="https://www.tamalax.com/" passHref>
-                  Equipment
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <NavbarCollapse className="md:flex hidden">
+          <NavbarLink active={pathname === "/"} href="/">
+            Home
+          </NavbarLink>
+          <Dropdown label="Clubs" inline theme={customHeaderTheme.dropdown}>
+            <DropdownItem
+              href="https://www.rangerlacrosse.org/"
+              as="a"
+              target="_blank"
+            >
+              Ranger Boys Lacrosse
+            </DropdownItem>
+            <DropdownItem
+              href="https://www.grizzliesgirlslacrosse.org/"
+              as="a"
+              target="_blank"
+            >
+              Grizzlies Girls Lacrosse
+            </DropdownItem>
+            <DropdownItem
+              href="https://www.cosmolax.com/"
+              as="a"
+              target="_blank"
+            >
+              Cosmo Chaos Lacrosse
+            </DropdownItem>
+            <DropdownItem href="https://boltslax.com/" as="a" target="_blank">
+              Bolts Lacrosse
+            </DropdownItem>
+          </Dropdown>
+          <NavbarLink href="#" active={pathname.startsWith("/news")} disabled>
+            News
+          </NavbarLink>
+          <NavbarLink
+            href="/calendar"
+            active={pathname.startsWith("/calendar")}
+          >
+            Calendar
+          </NavbarLink>
+          <NavbarLink href="https://www.tamalax.com" target="_blank">
+            Equipment
+          </NavbarLink>
+        </NavbarCollapse>
+        <NavbarToggle />
+        <NavbarCollapse className="md:hidden">
+          <NavbarLink href="/">Home</NavbarLink>
+          <NavbarLink href="https://www.rangerlacrosse.org/">
+            Ranger Boys Lacrosse
+          </NavbarLink>
+          <NavbarLink
+            href="https://www.grizzliesgirlslacrosse.org/"
+            target="_blank"
+          >
+            Grizzlies Girls Lacrosse
+          </NavbarLink>
+          <NavbarLink href="https://www.cosmolax.com/" target="_blank">
+            Cosmo Chaos Lacrosse
+          </NavbarLink>
+          <NavbarLink href="https://boltslax.com/" target="_blank">
+            Bolts Lacrosse
+          </NavbarLink>
 
-        {/* <Link
-          href="#"
-          className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-display font-bold text-sm px-6 py-3 rounded transform hover:-translate-y-0.5 transition shadow-lg"
-        >
-          FIND A TEAM
-        </Link> */}
-        <div></div>
-        <div></div>
-      </div>
+          <NavbarLink href="#" active={pathname.startsWith("/news")} disabled>
+            News
+          </NavbarLink>
+          <NavbarLink href="/calendar" active={pathname.startsWith("/calendar")}>
+            Calendar
+          </NavbarLink>
+          <NavbarLink href="https://www.tamalax.com" target="_blank">
+            Equipment
+          </NavbarLink>
+        </NavbarCollapse>
+      </Navbar>
     </header>
   );
 }
