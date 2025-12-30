@@ -20,7 +20,7 @@ export default function UpcomingDates() {
         </div>
         <div className="bg-slate-50 p-3 text-center border-t border-slate-100">
           <a
-            href="#"
+            href="/calendar"
             className="text-xs font-bold text-navy-900 hover:text-gold-600 uppercase tracking-widest"
           >
             View Full Calendar

@@ -1,9 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import {
-  Button,
   Navbar,
   NavbarBrand,
   NavbarCollapse,
@@ -12,7 +10,6 @@ import {
   createTheme,
   Dropdown,
   DropdownItem,
-  ThemeProvider,
 } from "flowbite-react";
 
 const customHeaderTheme = createTheme({
@@ -86,101 +83,74 @@ export function Header() {
         </NavbarBrand>
 
         <NavbarCollapse className="md:flex hidden">
-          <NavbarLink
-            active={pathname === "/"}
-            href="/"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-400"
-          >
+          <NavbarLink active={pathname === "/"} href="/">
             Home
           </NavbarLink>
-          <Dropdown
-            label="Clubs"
-            inline
-            // className="hover:underline dark:text-gray-400 p-2 hover:text-gray-400"
-            theme={customHeaderTheme.dropdown}
-          >
-            <DropdownItem href="/">Ranger Boys Lacrosse</DropdownItem>
-            <DropdownItem href="/">Grizzlies Girls Lacrosse</DropdownItem>
-            <DropdownItem href="/">Cosmo Chaos Lacrosse</DropdownItem>
-            <DropdownItem href="/">Bolts Lacrosse</DropdownItem>
+          <Dropdown label="Clubs" inline theme={customHeaderTheme.dropdown}>
+            <DropdownItem
+              href="https://www.rangerlacrosse.org/"
+              as="a"
+              target="_blank"
+            >
+              Ranger Boys Lacrosse
+            </DropdownItem>
+            <DropdownItem
+              href="https://www.grizzliesgirlslacrosse.org/"
+              as="a"
+              target="_blank"
+            >
+              Grizzlies Girls Lacrosse
+            </DropdownItem>
+            <DropdownItem
+              href="https://www.cosmolax.com/"
+              as="a"
+              target="_blank"
+            >
+              Cosmo Chaos Lacrosse
+            </DropdownItem>
+            <DropdownItem href="https://boltslax.com/" as="a" target="_blank">
+              Bolts Lacrosse
+            </DropdownItem>
           </Dropdown>
-          <NavbarLink
-            href="#"
-            active={pathname.startsWith("/news")}
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-600"
-          >
+          <NavbarLink href="#" active={pathname.startsWith("/news")} disabled>
             News
           </NavbarLink>
           <NavbarLink
-            href="#"
+            href="/calendar"
             active={pathname.startsWith("/calendar")}
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-600"
           >
             Calendar
           </NavbarLink>
-          <NavbarLink
-            href="https://www.tamalax.com"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-600"
-          >
+          <NavbarLink href="https://www.tamalax.com" target="_blank">
             Equipment
           </NavbarLink>
         </NavbarCollapse>
         <NavbarToggle />
         <NavbarCollapse className="md:hidden">
-          <NavbarLink
-            // active={pathname === "/"}
-            href="/"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-400"
-          >
-            Home
-          </NavbarLink>
-          <NavbarLink
-            // active={pathname === "/"}
-            href="/"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-400"
-          >
+          <NavbarLink href="/">Home</NavbarLink>
+          <NavbarLink href="https://www.rangerlacrosse.org/">
             Ranger Boys Lacrosse
           </NavbarLink>
           <NavbarLink
-            // active={pathname === "/"}
-            href="/"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-400"
+            href="https://www.grizzliesgirlslacrosse.org/"
+            target="_blank"
           >
             Grizzlies Girls Lacrosse
           </NavbarLink>
-          <NavbarLink
-            // active={pathname === "/"}
-            href="/"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-400"
-          >
+          <NavbarLink href="https://www.cosmolax.com/" target="_blank">
             Cosmo Chaos Lacrosse
           </NavbarLink>
-          <NavbarLink
-            // active={pathname === "/"}
-            href="/"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-400"
-          >
+          <NavbarLink href="https://boltslax.com/" target="_blank">
             Bolts Lacrosse
           </NavbarLink>
 
-          <NavbarLink
-            href="#"
-            active={pathname.startsWith("/news")}
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-600"
-          >
+          <NavbarLink href="#" active={pathname.startsWith("/news")} disabled>
             News
           </NavbarLink>
-          <NavbarLink
-            href="#"
-            active={pathname.startsWith("/calendar")}
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-600"
-          >
+          <NavbarLink href="/calendar" active={pathname.startsWith("/calendar")}>
             Calendar
           </NavbarLink>
-          <NavbarLink
-            href="https://www.tamalax.com"
-            // className="hover:underline text-gray-300 p-2 hover:text-gray-600"
-          >
+          <NavbarLink href="https://www.tamalax.com" target="_blank">
             Equipment
           </NavbarLink>
         </NavbarCollapse>

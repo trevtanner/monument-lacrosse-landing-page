@@ -51,15 +51,6 @@ export default function LandingPage() {
         </div>
         <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-8 grid grid-cols-1 sm:grid-cols-1">
           <Button
-            className="rounded-full transition duration-300 transform hover:scale-105 bg-orange-600 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
-            onClick={() =>
-              window.open("https://www.cosmolax.com/club-team", "_blank")
-            }
-          >
-            Cosmo Chaos Lacrosse Summer Team Tryouts
-          </Button>
-
-          <Button
             className="rounded-full transition duration-300 transform hover:scale-105 bg-bolts-main border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
             onClick={() =>
               window.open(
@@ -71,6 +62,17 @@ export default function LandingPage() {
             Bolts Lacrosse Summer Team Tryouts
           </Button>
 
+          <Button
+            className="rounded-full transition duration-300 transform hover:scale-105 bg-orange-600 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
+            onClick={() =>
+              window.open(
+                "https://www.cosmolax.com/chaosassessmentday",
+                "_blank"
+              )
+            }
+          >
+            Cosmo Chaos Lacrosse Supplemental Summer Team Tryouts
+          </Button>
           <Button
             className="rounded-full transition duration-300 transform hover:scale-105 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
             onClick={() =>

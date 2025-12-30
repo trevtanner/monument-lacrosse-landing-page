@@ -6,6 +6,7 @@ import { posts } from "@/data/news";
 import UpcomingDates from "./upcomingDates";
 import MailingList from "../forms/mailingList";
 import { NewsCard } from "../homeNews/newsCard";
+import NewsSection from "../homeNews/newsSection";
 
 export default function ClubsSection() {
   return (
@@ -31,30 +32,13 @@ export default function ClubsSection() {
               ))}
             </div>
           </section>
-          <section>
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="font-display font-black text-3xl text-navy-900">
-                The Field Report
-              </h3>
-              {/* <a
-                href="#"
-                className="text-sm font-bold text-gold-600 hover:underline"
-              >
-                View All Teams &rarr;
-              </a> */}
-            </div>
 
-            <div className="">
-              {posts.map((post) => (
-                <NewsCard key={post.id} post={post} />
-              ))}
-            </div>
-          </section>
+          {/* <NewsSection /> */}
         </div>
         <aside className="w-full lg:w-4/12 space-y-8">
           <div className="sticky top-24 space-y-8">
             <UpcomingDates />
-            <MailingList />
+            {/* <MailingList /> */}
           </div>
         </aside>
       </div>
