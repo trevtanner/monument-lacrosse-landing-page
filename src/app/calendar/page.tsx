@@ -1,9 +1,11 @@
 import MainCalendar from "@/components/calendar/mainCalendar";
+import { prisma } from "@/lib/prisma";
 
-export default function Calendar() {
+export default async function Calendar() {
+  const events = await prisma.event.findMany();
   return (
     <main>
-      <MainCalendar />
+      <MainCalendar events={events} />
     </main>
   );
 }

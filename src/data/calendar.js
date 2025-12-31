@@ -6,7 +6,10 @@ export const days = [
   { id: 5, title: "Friday", abbrv: "Fri" },
   { id: 6, title: "Saturday", abbrv: "Sat" },
   { id: 7, title: "Sunday", abbrv: "Sun" },
+  
 ];
+
+export const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
 export const events = [

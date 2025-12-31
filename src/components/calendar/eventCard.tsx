@@ -18,7 +18,7 @@ interface Props {
     title: string;
     age: string;
     url: string;
-    date: string;
+    date: Date;
     team: string;
   };
 }

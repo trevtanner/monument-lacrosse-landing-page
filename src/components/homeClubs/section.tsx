@@ -7,8 +7,13 @@ import UpcomingDates from "./upcomingDates";
 import MailingList from "../forms/mailingList";
 import { NewsCard } from "../homeNews/newsCard";
 import NewsSection from "../homeNews/newsSection";
+import { Event } from "@/generated/prisma/client";
 
-export default function ClubsSection() {
+interface Props {
+  events: Event[];
+}
+
+export default function ClubsSection({ events }: Props) {
   return (
     <section className="container mx-auto px-12 py-16 bg-slate-200">
       <div className="flex flex-col lg:flex-row gap-12">
@@ -37,7 +42,7 @@ export default function ClubsSection() {
         </div>
         <aside className="w-full lg:w-4/12 space-y-8">
           <div className="sticky top-24 space-y-8">
-            <UpcomingDates />
+            <UpcomingDates events={events}/>
             {/* <MailingList /> */}
           </div>
         </aside>

@@ -2,8 +2,13 @@
 
 import { dates } from "@/data/clubs";
 import { DatesCard } from "./datesCard";
+import { Event } from "@/generated/prisma/client";
 
-export default function UpcomingDates() {
+interface Props {
+  events: Event[];
+}
+
+export default function UpcomingDates({ events }: Props) {
   return (
     <div className="">
       <div className="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden">
@@ -14,9 +19,11 @@ export default function UpcomingDates() {
           <span className="text-gold-500 text-xl">📅</span>
         </div>
         <div className="px-2">
-          {dates.map((date, index) => (
-            <DatesCard key={index} details={date} />
-          ))}
+          {[...events]
+            .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+            .map((event: Event, index) => (
+              <DatesCard key={index} event={event} />
+            ))}
         </div>
         <div className="bg-slate-50 p-3 text-center border-t border-slate-100">
           <a

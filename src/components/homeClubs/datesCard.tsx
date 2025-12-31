@@ -1,23 +1,23 @@
 "use client";
 
+import { Event } from "@/generated/prisma/client";
 import Link from "next/link";
+import { monthNames } from "@/data/calendar";
 
 interface DatesCardProps {
-  details: {
-    title: string;
-    subtitle: string;
-    date: string;
-    team: string;
-    url: string;
-  };
+  event: Event;
 }
 
-function splitDate(dateString: string) {
-  return dateString.split(" ");
+function splitDate(dateString: Date) {
+  const eventDate = new Date(dateString);
+  const day = eventDate.getDate();
+  const month = eventDate.getMonth();
+
+  return [monthNames[month].slice(0, 3), day];
 }
 
-export const DatesCard: React.FC<DatesCardProps> = ({ details }) => {
-  const [month, day] = splitDate(details.date);
+export const DatesCard: React.FC<DatesCardProps> = ({ event }) => {
+  const [month, day] = splitDate(event.date);
 
   return (
     <div className="flex gap-4 p-4 border-b border-slate-100 hover:bg-slate-50 transition">
@@ -27,14 +27,12 @@ export const DatesCard: React.FC<DatesCardProps> = ({ details }) => {
       </div>
       <div>
         <h5 className="font-bold text-navy-900 text-md">
-          <Link href={details.url} className="hover:underline">
-            {details.title}
+          <Link href={event.url} className="hover:underline">
+            {event.title}
           </Link>
         </h5>
-        <p className="text-sm text-slate-500 font-semibold">
-          {details.subtitle}
-        </p>
-        <p className="text-xs text-slate-500 font-semibold">{details.team}</p>
+        <p className="text-sm text-slate-500 font-semibold">{event.age}</p>
+        <p className="text-xs text-slate-500 font-semibold">{event.team}</p>
       </div>
     </div>
   );

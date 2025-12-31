@@ -2,18 +2,22 @@
 
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { days, events } from "@/data/calendar";
+import { days } from "@/data/calendar";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import { Button } from "../ui/button";
 import { EventCard } from "./eventCard";
+import { Event } from "@/generated/prisma/client";
 
-export default function MainCalendar() {
-  // State to hold the currently selected date (initialized to current date)
+interface Props {
+  events: Event[];
+}
+
+export default function MainCalendar({ events }: Props) {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const [eventDetails, setEventDetails] = useState({
     title: "",
-    date: "",
+    date: new Date(),
     url: "",
     team: "",
     age: "",
@@ -45,14 +49,7 @@ export default function MainCalendar() {
 
   const today = new Date();
 
-  const openCardModal = (event: {
-    title: string;
-    date: string;
-    url: string;
-    team: string;
-    age: string;
-  }) => {
-    console.log(event);
+  const openCardModal = (event: Event) => {
     setEventDetails(event);
     setIsOpen(true);
   };
@@ -118,7 +115,7 @@ export default function MainCalendar() {
             dayNum === today.getDate() &&
             month === today.getMonth() &&
             year === today.getFullYear();
-          const dayEvents = events.filter((event) => {
+          const dayEvents = events.filter((event: Event) => {
             const eventDate = new Date(event.date);
             return (
               eventDate.getDate() === dayNum &&
