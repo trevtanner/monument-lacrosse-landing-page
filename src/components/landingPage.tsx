@@ -84,6 +84,12 @@ export default function LandingPage() {
           >
             U15 Boys U.S. National Team Regional ID Clinic
           </Button>
+          <Button
+            className="rounded-full transition duration-300 transform hover:scale-105 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
+            onClick={() => window.open("https://www.csboxla.com/", "_blank")}
+          >
+            Colorado Springs Box Lacrosse Leagues
+          </Button>
         </div>
       </div>
     </section>
