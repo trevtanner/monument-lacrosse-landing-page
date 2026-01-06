@@ -26,3 +26,9 @@ model Post {
   published Boolean @default(false)
   author    String
 }
+
+model User {
+  id            Int      @id @default(autoincrement())
+  username         String   @unique
+  password_hash String
+}
