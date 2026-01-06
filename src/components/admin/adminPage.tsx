@@ -1,7 +1,11 @@
 "use client";
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
+import { AddEventCard } from "./addEventCard";
 
 export default function AdminPage() {
+  const [isEventOpen, setIsEventOpen] = useState(false);
   return (
     <div className="container mx-auto px-12 py-16 bg-slate-200">
       <h1 className="text-center">Admin Options</h1>
@@ -10,6 +14,8 @@ export default function AdminPage() {
 
         <Button>Add News Post</Button>
       </div>
+
+      <AddEventCard isOpen={isEventOpen} setIsOpen={setIsEventOpen} />
     </div>
   );
 }
