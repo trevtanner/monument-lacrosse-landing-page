@@ -21,6 +21,7 @@ export default function UpcomingDates({ events }: Props) {
           {[...events]
             .filter((event) => new Date(event.date).getTime() >= new Date().setHours(0, 0, 0, 0))
             .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+            .slice(0, 10)
             .map((event: Event, index) => (
               <DatesCard key={index} event={event} />
             ))}

@@ -10,11 +10,17 @@ import { Event } from "@/generated/prisma/client";
 
 interface Props {
   events: Event[];
+  // events: {
+  //   title: string;
+  //   date: string;
+  //   url: string;
+  //   team: string;
+  //   age: string;
+  // };
 }
 
 export default function MainCalendar({ events }: Props) {
   const [currentDate, setCurrentDate] = useState(new Date());
-
   const [eventDetails, setEventDetails] = useState({
     title: "",
     date: new Date(),

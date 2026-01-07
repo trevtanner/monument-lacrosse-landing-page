@@ -1,15 +1,17 @@
 import ClubsSection from "@/components/homeClubs/section";
 import LandingPage from "@/components/landingPage";
-import { prisma } from "@/lib/prisma";
+import { turso } from "@/lib/turso";
 
 
 export default async function Home() {
-  const events = await prisma.event.findMany();
+  const resultSet = await turso.execute("SELECT * FROM Events");
+
+  const rows = JSON.parse(JSON.stringify(resultSet.rows));
 
   return (
     <main>
       <LandingPage />
-      <ClubsSection events={events} />
+      <ClubsSection events={rows} />
     </main>
   );
 }
