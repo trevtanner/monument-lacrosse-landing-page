@@ -21,7 +21,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/data*": ["./src/data/*"],
-      "@/images*": ["./public/images/*"]
+      "@/images*": ["./public/images/*"],
+      "@/actions*": ["./src/actions/*"],
+      "@/components*": ["./src/components/*"]
     }
   },
   "include": [

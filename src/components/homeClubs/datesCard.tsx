@@ -27,7 +27,7 @@ export const DatesCard: React.FC<DatesCardProps> = ({ event }) => {
       </div>
       <div>
         <h5 className="font-bold text-navy-900 text-md">
-          <Link href={event.url} className="hover:underline">
+          <Link href={event.url} target="_blank" className="hover:underline">
             {event.title}
           </Link>
         </h5>
