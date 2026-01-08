@@ -5,7 +5,6 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { SignJWT } from "jose";
 import bcrypt from "bcrypt";
-import { prisma } from "@/lib/prisma";
 import { turso } from "@/lib/turso";
 
 const SECRET_KEY = new TextEncoder().encode(process.env.JWT_SECRET || "secret");
@@ -15,10 +14,6 @@ export async function login(prevState: any, formData: FormData) {
   const password = formData.get("password") as string;
 
   // 1. Check if user exists
-  const user = await prisma.user.findUnique({
-    where: { username },
-  });
-
   const resultSet = await turso.execute({
     sql: "SELECT * FROM Users WHERE username = ?",
     args: [username],
