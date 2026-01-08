@@ -1,7 +1,14 @@
 "use client";
 
 import { DatesCard } from "./datesCard";
-import { Event } from "@/generated/prisma/client";
+
+interface Event {
+  title: string;
+  date: Date;
+  url: string;
+  team: string;
+  age: string;
+}
 
 interface Props {
   events: Event[];
@@ -19,8 +26,14 @@ export default function UpcomingDates({ events }: Props) {
         </div>
         <div className="px-2">
           {[...events]
-            .filter((event) => new Date(event.date).getTime() >= new Date().setHours(0, 0, 0, 0))
-            .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+            .filter(
+              (event) =>
+                new Date(event.date).getTime() >=
+                new Date().setHours(0, 0, 0, 0)
+            )
+            .sort(
+              (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+            )
             .slice(0, 10)
             .map((event: Event, index) => (
               <DatesCard key={index} event={event} />

@@ -7,7 +7,14 @@ import UpcomingDates from "./upcomingDates";
 import MailingList from "../forms/mailingList";
 import { NewsCard } from "../homeNews/newsCard";
 import NewsSection from "../homeNews/newsSection";
-import { Event } from "@/generated/prisma/client";
+
+interface Event {
+  title: string;
+  date: Date;
+  url: string;
+  team: string;
+  age: string;
+}
 
 interface Props {
   events: Event[];
@@ -42,7 +49,7 @@ export default function ClubsSection({ events }: Props) {
         </div>
         <aside className="w-full lg:w-4/12 space-y-8">
           <div className="sticky top-24 space-y-8">
-            <UpcomingDates events={events}/>
+            <UpcomingDates events={events} />
             {/* <MailingList /> */}
           </div>
         </aside>

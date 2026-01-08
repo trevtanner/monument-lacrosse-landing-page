@@ -1,8 +1,15 @@
 "use client";
 
-import { Event } from "@/generated/prisma/client";
 import Link from "next/link";
 import { monthNames } from "@/data/calendar";
+
+interface Event {
+  title: string;
+  date: Date;
+  url: string;
+  team: string;
+  age: string;
+}
 
 interface DatesCardProps {
   event: Event;

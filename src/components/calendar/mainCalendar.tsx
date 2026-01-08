@@ -6,22 +6,22 @@ import { days } from "@/data/calendar";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import { Button } from "../ui/button";
 import { EventCard } from "./eventCard";
-import { Event } from "@/generated/prisma/client";
+
+interface Event {
+  title: string;
+  date: Date;
+  url: string;
+  team: string;
+  age: string;
+}
 
 interface Props {
   events: Event[];
-  // events: {
-  //   title: string;
-  //   date: string;
-  //   url: string;
-  //   team: string;
-  //   age: string;
-  // };
 }
 
 export default function MainCalendar({ events }: Props) {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [eventDetails, setEventDetails] = useState({
+  const [eventDetails, setEventDetails] = useState<Event>({
     title: "",
     date: new Date(),
     url: "",
