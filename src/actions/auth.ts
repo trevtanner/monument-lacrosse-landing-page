@@ -43,7 +43,7 @@ export async function login(prevState: any, formData: FormData) {
     username: userRows.username,
   })
     .setProtectedHeader({ alg: "HS256" })
-    .setExpirationTime("24h")
+    .setExpirationTime("6h")
     .sign(SECRET_KEY);
 
   // 4. Set Cookie
@@ -53,7 +53,6 @@ export async function login(prevState: any, formData: FormData) {
   ).set("session", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    maxAge: 60 * 60 * 24, // 1 day
     path: "/",
   });
 

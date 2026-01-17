@@ -5,6 +5,8 @@ import { Label } from "@/components/ui/label";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "flowbite-react";
 import { AddEventFormSchema } from "@/lib/definitions";
 import { useState } from "react";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 interface Props {
   isOpen: boolean;
@@ -12,6 +14,7 @@ interface Props {
 }
 
 export function AddEventCard({ isOpen, setIsOpen }: Props) {
+  const router = useRouter();
   const [newEvent, setNewEvent] = useState({
     title: "",
     team: "",
@@ -42,6 +45,11 @@ export function AddEventCard({ isOpen, setIsOpen }: Props) {
 
       if (response.ok) {
         setIsOpen(false);
+        toast.success("Event has been created", {
+          description: newEvent.title,
+        });
+        router.refresh();
+
         setNewEvent({
           title: "",
           team: "",
@@ -61,7 +69,6 @@ export function AddEventCard({ isOpen, setIsOpen }: Props) {
     }
   };
 
-  console.log("newEvent", newEvent);
   return (
     <Modal
       dismissible

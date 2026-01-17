@@ -6,8 +6,6 @@ export default async function Calendar() {
 
   const rows = JSON.parse(JSON.stringify(resultSet.rows));
 
-  console.log("rows", rows);
-
   return (
     <main>
       <MainCalendar events={rows} />
