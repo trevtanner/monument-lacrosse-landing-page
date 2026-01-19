@@ -8,7 +8,7 @@ export default function NewsSection() {
     <section>
       <div className="flex items-center justify-between mb-8">
         <h3 className="font-display font-black text-3xl text-navy-900">
-          The Field Report
+          Upcoming Events
         </h3>
         {/* <a
                 href="#"

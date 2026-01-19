@@ -45,7 +45,7 @@ export default function ClubsSection({ events }: Props) {
             </div>
           </section>
 
-          {/* <NewsSection /> */}
+          <NewsSection />
         </div>
         <aside className="w-full lg:w-4/12 space-y-8">
           <div className="sticky top-24 space-y-8">
