@@ -32,7 +32,7 @@ export default function LandingPage() {
           skill-building, and fun in a supportive environment.
         </h2> */}
 
-        <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-8 grid grid-cols-1 sm:grid-cols-2">
+        <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-12 pb-8 grid grid-cols-1 md:grid-cols-3">
           <Button
             className="rounded-full transition duration-300 transform hover:scale-105 bg-orange-700 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
             onClick={() =>
@@ -41,6 +41,18 @@ export default function LandingPage() {
             aria-label="Ranger Lacrosse Link"
           >
             Ranger Boys Lacrosse
+          </Button>
+          <Button
+            className="rounded-full transition duration-300 transform hover:scale-105 bg-orange-600 border border-white text-white hover:bg-slate-900 hover:text-white m-auto text-xl"
+            size="lg"
+            onClick={() =>
+              window.open(
+                "https://www.rangerlacrosse.org/program/learn-to-play-clinic/11749",
+                "_blank",
+              )
+            }
+          >
+            Free Learn to Play Clinic
           </Button>
 
           <Button
@@ -52,7 +64,7 @@ export default function LandingPage() {
             Grizzlies Girls Lacrosse
           </Button>
         </div>
-        <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-8 grid grid-cols-1 sm:grid-cols-1">
+        <div className="font-sans flex-col sm:flex-row justify-center sm:space-x-4 gap-x-12 gap-y-4 mt-12 grid grid-cols-1 sm:grid-cols-1">
           <Button
             className="rounded-full transition duration-300 transform hover:scale-105 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
             onClick={() =>
@@ -63,17 +75,6 @@ export default function LandingPage() {
             }
           >
             U15 Boys U.S. National Team Regional ID Clinic
-          </Button>
-          <Button
-            className="rounded-full transition duration-300 transform hover:scale-105 bg-bolts-main border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
-            onClick={() =>
-              window.open(
-                "https://www.rangerlacrosse.org/program/learn-to-play-clinic/11749",
-                "_blank",
-              )
-            }
-          >
-            Free Learn to Play Clinic
           </Button>
           <Button
             className="rounded-full transition duration-300 transform hover:scale-105 bg-red-700 border border-white text-white hover:bg-gray-500 hover:text-white m-auto"
